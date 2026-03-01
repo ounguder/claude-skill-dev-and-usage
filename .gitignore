@@ -1,0 +1,12 @@
+# Local machine config — never commit
+CLAUDE.local.md
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+*.swp
+*.swo
