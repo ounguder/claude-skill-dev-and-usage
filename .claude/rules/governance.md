@@ -76,10 +76,11 @@ When the user asks to install a skill into a project:
 
 1. Confirm the skill name and target project path
 2. Confirm whether it is global or local
-3. For **global**: copy to `C:\Users\ungud\.claude\commands\{skill-name}.md`
+3. For **global**: copy to `C:\Users\{your-username}\.claude\commands\{skill-name}.md`
 4. For **local**: copy to `{project-path}\.claude\commands\{skill-name}.md`
    (create the directory if it does not exist)
 5. Confirm: "Installed `/{skill-name}` to `{path}`."
+6. Add a row to `INSTALL-MANIFEST.md`: skill name, target project, full path, version installed, date.
 
 **Do not modify the skill file during installation.** Install the file as-is.
 If changes are needed, apply them first as an improvement, then install.

@@ -36,52 +36,13 @@ Claude reads `session-end.md` and executes all steps in order.
 
 ---
 
-## 3. Prerequisites
+## 3. Setup
 
-| Requirement | Needed for |
-|-------------|-----------|
-| [Claude Code](https://claude.ai/download) | All skills |
-| Python 3.x | Local skills (runs `vault-sync.py`) |
-| Obsidian + vault-sync.py | Local skills (session management, vault sync) |
-| firmware-project-template-ci project setup | Local skills (full infrastructure) |
+See [Prerequisites](./README.md#prerequisites) and [How to Install Skills](./README.md#how-to-install-skills) in README.md for what you need and how to install and verify skills.
 
 ---
 
-## 4. How to Install Skills
-
-### Global skill
-
-```powershell
-# Copy once — available immediately in all sessions
-copy skills\global\simulate-user.md C:\Users\{your-username}\.claude\commands\simulate-user.md
-```
-
-### Local skill (into an existing project)
-
-```powershell
-# Create the commands directory if it doesn't exist
-mkdir {project}\.claude\commands
-
-# Copy the skill
-copy skills\local\session-start.md {project}\.claude\commands\session-start.md
-```
-
-### Verify installation
-
-Start a Claude session in the target directory and type:
-```
-/help
-```
-Installed skills appear in the list of available slash commands.
-
-**If the skill doesn't appear**, check:
-- Global: the file must be directly in `C:\Users\{your-username}\.claude\commands\` (not a subdirectory)
-- Local: the file must be in `{project-root}\.claude\commands\` (not nested further)
-- The filename must match exactly: `simulate-user.md` → `/simulate-user`
-
----
-
-## 5. How to Invoke a Skill
+## 4. How to Invoke a Skill
 
 In any Claude Code session, type the skill name as a slash command:
 
@@ -115,7 +76,7 @@ change. Claude will adapt and continue.
 
 ---
 
-## 6. How Skills Are Structured
+## 5. How Skills Are Structured
 
 A skill file is a Markdown document. Claude reads it top to bottom and treats each section
 as an instruction. There is no special syntax — plain English with clear steps.
@@ -181,7 +142,7 @@ Say:
 
 ---
 
-## 7. Writing Your Own Skill
+## 6. Writing Your Own Skill
 
 ### Before you start
 
@@ -212,7 +173,7 @@ If yes — it's a good skill candidate.
 
 ---
 
-## 8. Skill Versioning
+## 7. Skill Versioning
 
 Skills in this project are versioned. Each skill file has a version comment at the top:
 
@@ -237,7 +198,7 @@ When a skill changes, update:
 
 ---
 
-## 9. Deploying Updated Skills
+## 8. Deploying Updated Skills
 
 When you update a skill in `skills/global/` or `skills/local/`, you need to re-copy it
 to wherever it is installed:
@@ -255,7 +216,7 @@ version is current so you know when a deployed copy is out of date.
 
 ---
 
-## 10. Quick Reference
+## 9. Quick Reference
 
 | Task | How |
 |------|-----|
