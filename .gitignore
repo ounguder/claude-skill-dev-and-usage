@@ -1,6 +1,9 @@
 # Local machine config — never commit
 CLAUDE.local.md
 
+# Simulation reports
+user-simulation-*.md
+
 # OS artifacts
 .DS_Store
 Thumbs.db
