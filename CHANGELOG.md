@@ -3,10 +3,27 @@
 All skill changes are logged here.
 
 Versioning:
-- **Minor (0.X.0):** step added, removed, or significantly changed
-- **Patch (0.0.X):** wording fix, typo, clarification
+- **Minor (X.1.0):** step added, removed, or significantly changed
+- **Patch (X.0.X):** wording fix, typo, clarification
 
 Each skill file also carries its own `<!-- version: X.Y.Z -->` comment.
+
+---
+
+## [1.1.0] — 2026-03-01
+
+**Documentation improvement pass — simulation findings addressed (IMP-001 through IMP-012).**
+
+### Changes
+
+| Area | Change | IMP |
+|------|--------|-----|
+| README.md | Added personal scope callout, Prerequisites table, "Requires" catalog column, expanded descriptions, `{your-username}` paths, governance.md link, expanded Related Repositories | IMP-001, 002, 003, 006, 007, 009, 011 |
+| HOW-TO-USE-SKILLS.md | Added Prerequisites section, fixed hardcoded paths, expanded install verification | IMP-002, 003, 008 |
+| IMPROVEMENTS.md | Added IMP-001–012 as full worked examples in Applied section | IMP-004 |
+| INSTALL-MANIFEST.md | Created install tracking manifest (new file) | IMP-005 |
+| CHANGELOG.md | Fixed versioning notation from `0.X.0` to `X.1.0` | IMP-010 |
+| CLAUDE.md | Added Current State section | IMP-012 |
 
 ---
 

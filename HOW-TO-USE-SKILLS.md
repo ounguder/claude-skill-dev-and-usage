@@ -36,13 +36,24 @@ Claude reads `session-end.md` and executes all steps in order.
 
 ---
 
-## 3. How to Install Skills
+## 3. Prerequisites
+
+| Requirement | Needed for |
+|-------------|-----------|
+| [Claude Code](https://claude.ai/download) | All skills |
+| Python 3.x | Local skills (runs `vault-sync.py`) |
+| Obsidian + vault-sync.py | Local skills (session management, vault sync) |
+| firmware-project-template-ci project setup | Local skills (full infrastructure) |
+
+---
+
+## 4. How to Install Skills
 
 ### Global skill
 
 ```powershell
 # Copy once — available immediately in all sessions
-copy skills\global\simulate-user.md C:\Users\ungud\.claude\commands\simulate-user.md
+copy skills\global\simulate-user.md C:\Users\{your-username}\.claude\commands\simulate-user.md
 ```
 
 ### Local skill (into an existing project)
@@ -63,9 +74,14 @@ Start a Claude session in the target directory and type:
 ```
 Installed skills appear in the list of available slash commands.
 
+**If the skill doesn't appear**, check:
+- Global: the file must be directly in `C:\Users\{your-username}\.claude\commands\` (not a subdirectory)
+- Local: the file must be in `{project-root}\.claude\commands\` (not nested further)
+- The filename must match exactly: `simulate-user.md` → `/simulate-user`
+
 ---
 
-## 4. How to Invoke a Skill
+## 5. How to Invoke a Skill
 
 In any Claude Code session, type the skill name as a slash command:
 
@@ -99,7 +115,7 @@ change. Claude will adapt and continue.
 
 ---
 
-## 5. How Skills Are Structured
+## 6. How Skills Are Structured
 
 A skill file is a Markdown document. Claude reads it top to bottom and treats each section
 as an instruction. There is no special syntax — plain English with clear steps.
@@ -165,7 +181,7 @@ Say:
 
 ---
 
-## 6. Writing Your Own Skill
+## 7. Writing Your Own Skill
 
 ### Before you start
 
@@ -196,7 +212,7 @@ If yes — it's a good skill candidate.
 
 ---
 
-## 7. Skill Versioning
+## 8. Skill Versioning
 
 Skills in this project are versioned. Each skill file has a version comment at the top:
 
@@ -221,17 +237,17 @@ When a skill changes, update:
 
 ---
 
-## 8. Deploying Updated Skills
+## 9. Deploying Updated Skills
 
 When you update a skill in `skills/global/` or `skills/local/`, you need to re-copy it
 to wherever it is installed:
 
 ```powershell
 # Re-deploy a global skill
-copy skills\global\simulate-user.md C:\Users\ungud\.claude\commands\simulate-user.md
+copy skills\global\simulate-user.md C:\Users\{your-username}\.claude\commands\simulate-user.md
 
 # Re-deploy a local skill to a specific project
-copy skills\local\session-end.md C:\Users\ungud\Desktop\Projects\my-project\.claude\commands\session-end.md
+copy skills\local\session-end.md {project}\.claude\commands\session-end.md
 ```
 
 There is no auto-sync — deployment is manual. The `README.md` skill catalog tracks which
@@ -239,7 +255,7 @@ version is current so you know when a deployed copy is out of date.
 
 ---
 
-## 9. Quick Reference
+## 10. Quick Reference
 
 | Task | How |
 |------|-----|

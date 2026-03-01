@@ -36,3 +36,12 @@ See @README.md
 
 ## Version History
 See @CHANGELOG.md
+
+## Current State
+
+- **Collection version:** v1.1.0
+- **Open improvements:** 0 (see IMPROVEMENTS.md)
+- **Last change:** v1.1.0 — documentation improvement pass, IMP-001 through IMP-012 applied
+- **Deployed skills:** see INSTALL-MANIFEST.md
+
+_Update this section at the end of each working session._
